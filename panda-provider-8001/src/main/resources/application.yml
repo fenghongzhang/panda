@@ -1,0 +1,23 @@
+server:
+  port: 8001
+  
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.fhz.panda.entity
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml
+  
+spring:
+  application:
+    name: panda-provider-8001
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/blog
+    username: root
+    password: test
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
