@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8002
   
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml
@@ -7,7 +7,8 @@ mybatis:
   mapper-locations:
   - classpath:mybatis/mapper/**/*.xml
   
-spring:
+
+spring: 
   application:
     name: panda-admin
   datasource:
@@ -19,21 +20,19 @@ spring:
     dbcp2:
       min-idle: 5
       initial-size: 5
-      max-total: 5
+      max-idle: 5
       max-wait-millis: 200
       
 eureka:
-  client:  #客户端注册进eureka服务列表内
+  client: #客户端注册进eureka服务列表内
     service-url: 
-#      defaultZone: http://localhost:7001/eureka
-       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
   instance:
-    instance-id: panda-provider8001
-    prefer-ip-address: true
-   
-
-info: 
-  app.name: panda-admin
+    instance-id: panda-admin8002   #自定义服务名称信息
+    prefer-ip-address: true     #访问路径可以显示IP地址
+      
+info:
+  app.name: panda-admin8002
   company.name: www.fenghongzhang.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$

@@ -93,5 +93,8 @@
   	<module>panda-provider-8001</module>
   	<module>panda-consumer-admin-80</module>
   	<module>panda-eureka-client-7001</module>
+  	<module>panda-eureka-7002</module>
+  	<module>panda-eureka-7003</module>
+  	<module>panda-provider-8002</module>
   </modules>
 </project>

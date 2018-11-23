@@ -11,7 +11,8 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("/sysuser")
 public class SysUserController {
 
-	private static final String url = "http://localhost:8001/";
+//	private static final String url = "http://localhost:8001/";
+	private static final String url = "http://panda-admin";
 	
 	
 	@Autowired
@@ -24,6 +25,11 @@ public class SysUserController {
 		return forObject+"";
 	}
 	
-	
+	// 测试@EnableDiscoveryClient,消费端可以调用服务发现
+	@RequestMapping(value = "/consumer/dept/discovery")
+	public Object discovery()
+	{
+		return restTemplate.getForObject(url + "/sysuser/dept/discovery", Object.class);
+	}
 	
 }

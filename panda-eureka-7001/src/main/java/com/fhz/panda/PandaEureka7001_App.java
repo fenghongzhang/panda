@@ -2,13 +2,14 @@ package com.fhz.panda;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+
 
 @SpringBootApplication
-@EnableEurekaClient
-public class PandaConsumer80_App {
+@EnableEurekaServer
+public class PandaEureka7001_App {
 	
 	public static void main(String[] args) {
-		SpringApplication.run(PandaConsumer80_App.class, args);
+		SpringApplication.run(PandaEureka7001_App.class, args);
 	}
 }
