@@ -21,3 +21,19 @@ spring:
       initial-size: 5
       max-total: 5
       max-wait-millis: 200
+      
+eureka:
+  client:  #客户端注册进eureka服务列表内
+    service-url: 
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    instance-id: panda-provider8001
+    prefer-ip-address: true
+   
+
+info: 
+  app.name: panda-microservicecloud
+  company.name: www.fenghongzhang.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+      
